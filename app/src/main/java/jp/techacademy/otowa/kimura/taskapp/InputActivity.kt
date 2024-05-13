@@ -130,6 +130,7 @@ class InputActivity : AppCompatActivity() {
             // taskの値を画面項目に反映
             binding.content.titleEditText.setText(task.title)
             binding.content.contentEditText.setText(task.contents)
+            binding.content.categoryEditText.setText(task.category)
         }
 
         // 日付と時刻のボタンの表示を設定
@@ -158,6 +159,7 @@ class InputActivity : AppCompatActivity() {
             task.title = title
             task.contents = content
             task.date = date
+            task.category = category
 
             // 登録処理
             realm.writeBlocking {
